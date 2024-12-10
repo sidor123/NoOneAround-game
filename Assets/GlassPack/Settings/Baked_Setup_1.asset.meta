@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3ebfbd602f46d2e45b27ae911a062a4a
+timeCreated: 1499849945
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Settings/Baked_Setup_1.asset
+  uploadId: 614732

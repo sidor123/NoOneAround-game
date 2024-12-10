@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 033e7073193dd2b468b81adb1c527b81
+timeCreated: 1499970376
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Prefabs/Pottery/Pottery8.prefab
+  uploadId: 614732

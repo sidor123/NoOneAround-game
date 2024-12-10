@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4d01b80285b89964cb7c14a91ed53bc1
+timeCreated: 1500009781
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Help/Quick Start.txt
+  uploadId: 614732

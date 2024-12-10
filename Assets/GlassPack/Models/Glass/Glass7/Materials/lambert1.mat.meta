@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 899dde6a1600236478bb7f31d01798c5
+timeCreated: 1499849029
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Models/Glass/Glass7/Materials/lambert1.mat
+  uploadId: 614732

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c6047a3813690da42b21523612d64dfc
+timeCreated: 1499849526
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Shaders/Glass_Metallic.shader
+  uploadId: 614732

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cd0574072cb5fbb4091ac136212a0edf
+timeCreated: 1499849526
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Shaders/Glass_Specular.shader
+  uploadId: 614732

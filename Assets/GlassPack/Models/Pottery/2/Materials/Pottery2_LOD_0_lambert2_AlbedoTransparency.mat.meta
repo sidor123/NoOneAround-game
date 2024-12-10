@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d30c68e105c7dd94eaba4963c106a8bd
+timeCreated: 1499968962
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Models/Pottery/2/Materials/Pottery2_LOD_0_lambert2_AlbedoTransparency.mat
+  uploadId: 614732

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 83e54289e5a73d246b1449683aac3bab
+timeCreated: 1499970366
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95520
+  packageName: HD Glass Pack
+  packageVersion: 1.2
+  assetPath: Assets/GlassPack/Prefabs/Glass/Glass8.prefab
+  uploadId: 614732
