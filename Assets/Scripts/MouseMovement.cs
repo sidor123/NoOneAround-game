@@ -3,7 +3,6 @@ using UnityEngine;
 public class MouseMovement : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
- 
     float xRotation = 0f;
     float YRotation = 0f;
  
@@ -22,13 +21,12 @@ public class MouseMovement : MonoBehaviour
        xRotation -= mouseY;
  
        //we clamp the rotation so we cant Over-rotate (like in real life)
-       xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+       xRotation = Mathf.Clamp(xRotation, -60f, 60f);
  
        //control rotation around y axis (Look up and down)
        YRotation += mouseX;
  
        //applying both rotations
        transform.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
- 
     }
 }
