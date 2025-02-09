@@ -1,6 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : Malfunctionable
 {
     public float interactionRange = 3f; // Максимальное расстояние для взаимодействия
     public float openHeight = 6f; // Высота, на которую поднимается дверь
@@ -9,14 +10,13 @@ public class Door : MonoBehaviour
     public bool isLocked = false; // Флаг для заблокированной двери
 
     private Vector3 initialPosition; // Начальная позиция двери
-    private Vector3 targetPosition; // Целевая позиция при открытии
     private bool isMoving = false; // Флаг движения двери
     private Transform player; // Ссылка на игрока
+
 
     void Start()
     {
         initialPosition = transform.position;
-        targetPosition = initialPosition + Vector3.up * openHeight;
 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -37,19 +37,19 @@ public class Door : MonoBehaviour
         if (distance <= interactionRange && Input.GetKeyDown(KeyCode.E) && !isMoving)
         {
             isMoving = true;
-            StartCoroutine(OpenAndCloseDoor());
+            StartCoroutine(OpenAndCloseDoor(initialPosition + Vector3.up * openHeight, 3));
+            isMoving = false;
         }
     }
 
-    private System.Collections.IEnumerator OpenAndCloseDoor()
-    {
+    private System.Collections.IEnumerator OpenAndCloseDoor(Vector3 targetPosition, int delay) {
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             yield return null;
         }
 
-        yield return new WaitForSeconds(stayOpenTime);
+        yield return new WaitForSeconds(delay);
 
         while (Vector3.Distance(transform.position, initialPosition) > 0.01f)
         {
@@ -57,11 +57,37 @@ public class Door : MonoBehaviour
             yield return null;
         }
 
-        isMoving = false;
     }
 
-    public void UnlockDoor()
-    {
+    private System.Collections.IEnumerator OpenBrokenDoor(Vector3 targetPosition) {
+        while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    private System.Collections.IEnumerator CloseBrokenDoor() {
+        while (Vector3.Distance(transform.position, initialPosition) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, initialPosition, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    public override void Broken() {
+        isLocked = true;
+        if (malfunctionAudioSource != null) {
+            malfunctionAudioSource.Play();
+        }
+        StartCoroutine(OpenBrokenDoor(initialPosition + Vector3.up * 2f));
+    }
+
+    public override void Fixed() {
+        if (malfunctionAudioSource != null) {
+            malfunctionAudioSource.Stop();
+        }
+        StartCoroutine(CloseBrokenDoor());
         isLocked = false;
     }
 }

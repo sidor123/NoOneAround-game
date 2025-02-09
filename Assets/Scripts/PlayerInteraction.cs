@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    private Interactable currentInteractable;
+    private Malfunctionable currentInteractable;
 
     private void Update()
     {
@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Interactable>(out Interactable interactable))
+        if (other.TryGetComponent<Malfunctionable>(out Malfunctionable interactable))
         {
             currentInteractable = interactable;
         }
@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<Interactable>(out Interactable interactable))
+        if (other.TryGetComponent<Malfunctionable>(out Malfunctionable interactable))
         {
             if (currentInteractable == interactable)
             {
